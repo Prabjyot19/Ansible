@@ -1,0 +1,19 @@
+---
+- name: Playbook to run debug module
+  hosts: localhost
+  vars:
+    software: "Visual Studio"
+
+  tasks:
+    - name: Print using msg
+      debug:
+        msg: Lets Learn Ansible
+
+    - name: Print using var
+      debug:
+        var: software
+
+    - name: Check here the verbosity
+      debug:
+        msg: Hiii!!!
+        verbosity: 3
